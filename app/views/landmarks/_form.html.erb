@@ -1,0 +1,18 @@
+<table>
+<%= form_for @landmark do |form| %>
+	<tr>
+	<td> <%= form.label :name %> </td>
+	<td> <%= form.text_field :name %> </td>
+	</tr>
+	<tr>
+	<td> <%= form.label :address %> </td>
+	<td> <%= form.text_area :address, :rows => 3 %> </td>
+	</tr>
+	<tr>
+	<td> <%= form.label :primary_use, text='Why Bother?' %> </td>
+	<td> <%= form.text_area :primary_use, :rows => 3 %> </td>
+	</tr>
+</table>
+<%= form.submit %>
+<% end %>
+<%= button_to "Cancel", :action => "index" %>

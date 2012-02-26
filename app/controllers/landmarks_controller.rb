@@ -1,7 +1,7 @@
 class LandmarksController < ApplicationController
   
   def index
-    @landmarks = Landmark.all
+    @landmarks = Landmark.order("name asc")
   end
 
   def show

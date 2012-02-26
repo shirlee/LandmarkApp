@@ -1,15 +1,15 @@
 <h1><%= @landmark.name%></h1>
 
+
 <p><b>Address:</b> <%= @landmark.address%></p>
 <p><b>Why Bother:</b> <%= @landmark.primary_use%></p>
+
+<br>
+
+<%= link_to "Edit Landmark", edit_landmark_url(@landmark.id) %> | <%= link_to "Delete", landmark_url(@landmark.id), :confirm => 'Are you sure?', :method => :delete %> | <%= link_to "View All Landmarks", landmarks_url %>
+
+<br>
 
 <% if @landmark.address != "" %>
 <p><img border="0" src="http://maps.googleapis.com/maps/api/staticmap?center= <%= @landmark.address %>&zoom=13&size=400x400&sensor=false&markers=color:blue|<%= @landmark.address %>" alt="<%= @landmark.address%>" /></p>
 <% end %>
-
-<%= link_to "Edit", edit_landmark_url(@landmark.id) %> | <%= link_to "Delete", landmark_url(@landmark.id), :confirm => 'Are you sure?', :method => :delete %>
-
-<br>
-<br>
-
-<%= link_to "All Landmarks", landmarks_url %>

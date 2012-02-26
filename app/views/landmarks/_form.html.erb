@@ -13,6 +13,12 @@
 	<td> <%= form.text_area :primary_use, :rows => 3 %> </td>
 	</tr>
 </table>
-<%= form.submit %>
+
+<table>
+	<tr>
+	<td> <%= button_to "Cancel", :action => "index" %> </td>
+	<td> <%= form.submit %> </td>
+	</tr>
+</table>
+
 <% end %>
-<%= button_to "Cancel", :action => "index" %>

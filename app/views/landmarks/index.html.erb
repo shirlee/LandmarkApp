@@ -1,5 +1,7 @@
 <h1>Detroit Landmarks</h1>
 
+<%= button_to "Create a New Landmark", new_landmark_url %>
+
 	<% label = 0 %>
 	<% markers = "" %>
 	
@@ -19,4 +21,4 @@
 <p><img border="0" src="http://maps.googleapis.com/maps/api/staticmap?center=Dearborn, MI&zoom=9&size=640x400&sensor=false&<%= markers %>" alt="Trip to Detroit" /></p>
 
 
-<%= link_to "Create a New Landmark", new_landmark_url %>
+

@@ -10,7 +10,7 @@ class LandmarksController < ApplicationController
 
   def destroy
     @landmark = Landmark.find_by_id(params[:id])
-    @landmark.delete
+    @landmark.destroy
     redirect_to landmarks_url
   end
 

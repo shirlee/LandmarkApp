@@ -12,13 +12,14 @@
 	<td> <%= form.label :primary_use, text='Why Bother?' %> </td>
 	<td> <%= form.text_area :primary_use, :rows => 3 %> </td>
 	</tr>
+	<tr>
 </table>
 
-<table>
-	<tr>
-	<td> <%= button_to "Cancel", :action => "index" %> </td>
-	<td> <%= form.submit %> </td>
-	</tr>
-</table>
+<br>
+<br>
+
+<%= link_to "Cancel", landmarks_url %> | <%= form.submit %> 
+
+
 
 <% end %>
